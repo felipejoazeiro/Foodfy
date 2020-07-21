@@ -1,0 +1,50 @@
+{% extends "admin/layout.njk" %}
+
+{% block content %}
+    <main  class="create-form relative" >
+        <form method="POST" action="/admin/recipes?_method=PUT">
+            <div class="title">
+                <h3>Criando Receita</h3>
+                <button type="submit">Salvar receita</button>
+            </div>
+            <div class="form">
+                <div class="item">
+                    <div>Imagem da receita</div>
+                    <input type="url" value="{{receita.receita_url}}" name="receita_url">
+                </div>
+                <div class="item">
+                    <div>Ingredientes</div>
+                    <div id="ingredients-list">
+                    {% for ingrediente in receita.ingredients %}
+                        <input type="text" value="{{ingrediente}}" name=ingredients>
+                    {% endfor %}
+                    </div>
+                    <a id="newIngredient">Adicionar novo ingrediente</a>
+                </div>
+                <div class="item">
+                    <div>Modo de Preparo</div>
+                    <div id="preparation-list">
+                    {% for etapa in receita.preparation %}
+                        <input type="text" value="{{etapa}}" name="preparation">
+                    {% endfor %}
+                    </div>
+                    <div>
+                        <a id="newPreparation">Adicionar novo passo</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>Informações Adicionais</div>
+                    <div>
+                        <textarea name="information" rows="10" cols="40">{{receita.information}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="id" value="{{receita.id}}">
+        </form>
+        <form id="form-delete" action="/admin/recipes?_method=DELETE" method="POST">
+            <input type="hidden" name="id" value={{receita.id}}>
+            <button type="submit">Deletar</button>
+        </form>
+    </main>
+    <script src="/index.js"></script>
+{% endblock content %}

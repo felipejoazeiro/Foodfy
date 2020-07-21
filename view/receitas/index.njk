@@ -1,0 +1,74 @@
+{% extends 'receitas/layout.njk' %}
+    {% block content %}
+        <main>
+            <div class="container">
+                <div class="descricao">
+                    <h2>As melhores receitas</h2>
+                    <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+                </div>
+                <div class="imagem">
+                    <img src="/assets/chef.png" alt="Imagem de cozinheiro">
+                </div>
+            </div>
+            <section class="foods">
+                <h2>Mais Acessadas</h2>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="assets/burger.png" alt="">
+                        </div>
+                        <div class="card-description">
+                            <h3>Triplo bacon burger</h3>
+                            <p>por Jorge Relato</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/assets/pizza.png" alt="">
+                        </div>
+                        <div class="card-description">
+                            <h3>Pizza 4 estações</h3>
+                            <p>por Fabiana Melo</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/assets/espaguete.png" alt="">
+                        </div>
+                        <div class="card-description">
+                            <h3>Espaguete ao alho</h3>
+                            <p>por Júlia Kinoto</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/assets/lasanha.png" alt="">
+                        </div>
+                        <div class="card-description">
+                            <h3>Lasanha mac n' cheese</h3>
+                            <p>por Juliano Vieira</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/assets/doce.png" alt="">
+                        </div>
+                        <div class="card-description">
+                            <h3>Docinhos pão-do-céu</h3>
+                            <p>por Ricardo Golvea</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/assets/asinhas.png" alt="">
+                        </div>
+                        <div class="card-description">
+                            <h3>Asinhas de frango ao barbecue</h3>
+                            <p>por Vania Steroski</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+    {% endblock content %}

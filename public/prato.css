@@ -1,0 +1,94 @@
+main{
+    margin-bottom: 7.2%;
+}
+.ilustracao{
+    width:60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item img{
+    width:100%;
+    height: 300px;
+    border-radius: 15px;
+    margin-bottom: 48px;
+}
+.item h1{
+    font-size: 36px;
+    color: #111111;
+    margin-bottom: 11px;
+}
+.item p{
+    font-size: 20px;
+    color: #777777;
+}
+.text{
+    padding-top: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+.sobre,
+.modo-preparo{
+    margin-bottom: 2.5%;;
+}
+.subject{
+    display: flex;
+    flex-direction: row;
+}
+.show{
+    padding-top: 0.8em;
+    text-align: center;
+    width: 5%;
+    height: 1.8em;
+    font-size: 12px;
+    border-radius: 50%;
+}
+.subject h2{
+    margin-bottom: 14px;
+    margin-right: 8px;
+}
+.subject p{
+    cursor: pointer;
+}
+.lista{
+    list-style-position: inside;
+}
+li{
+    line-height: 28px;
+    font-size: 18px;
+    color:#444444;
+}
+.information p{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+/*------INVISIBLE-----*/
+
+.information,
+.preparo{
+    display: none;
+}
+
+.show1,
+.hide1,
+.show2,
+.hide2,
+.show3,
+.hide3{
+    display: none;
+}
+.visible{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+
+
+

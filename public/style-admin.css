@@ -1,0 +1,258 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+    
+    font-family: 'Roboto', sans-serif;
+}
+#actual{
+    font-weight: bold;
+}
+header{
+    width:100%;
+    background-color: black;
+    height: 100%;
+    margin-bottom: 2.7%;
+    display: flex;
+    padding: 15px 0;
+}
+.titulo{
+    width: 60%;
+    margin: 0 auto;
+}
+.titulo a{
+    font-family: 'Crimson Text', serif;
+    font-weight: normal;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+header .links{
+    margin-top: 10px
+}
+.container{
+    width:60%;
+    height: 100%;
+    margin: 0 auto;
+    height: 380px;
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    display: flex;
+}
+.container .descricao{
+    width: 40%;
+    margin-top: 10%;
+    margin-left: 8%;
+    margin-right: 17.7%;
+}
+.container .descricao h2{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 2.9%;
+}
+.container .descricao p{
+    width: 316px;
+    opacity: 0.7;
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+}
+.container .imagem{
+    margin-top: 6.9%;
+
+}
+.container .imagem img{
+    width: 216px;
+    height: 300px;
+}
+
+.foods{
+    margin: 45px auto;
+    width:60%;
+    height: 100%;
+}
+.cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    margin-top: 1.8%;
+}
+
+.card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.card-img{
+    display: inline-block;
+    width: 100%;
+    height: 120px;
+    border-radius: 15px;
+}
+.card-description{
+    display: inline-block;
+    margin-left: 25px;
+}
+.card-description h3{
+    color:#111111;
+    font-size: 18px;
+    margin: 2.5% 0 6% 0;
+}
+.card-description p{
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.card-description a{
+    font-size: 16px;
+    font-weight: bold;
+    color: #6558C3;
+    text-decoration: none;
+}
+footer{
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: #EEEEEE;
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-bottom;
+    height: 62px;
+}
+footer p{
+    padding-top: 20px;
+}
+
+
+
+/*   CREATE   */
+.create-form{
+    width: 60%;
+    margin: 0 auto;
+}
+div.title{
+    display: flex;
+    justify-content: space-between;
+}
+div.title h3{
+    font-size: 24px;
+    color: #111111;
+    font-weight: bold;
+}
+div.title button{
+    background-color: #6558C3;
+    border-radius: 4px;
+    width: 15%;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding:8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.item{
+    margin: 1.75em 0;
+}
+.item div:first-child{
+    margin-bottom: 0.75em;
+}
+.item input{
+    display: block;
+    width: 100%;
+    border: solid 1px black;
+    border-radius: 4px;
+    height: 36px;
+    padding: 0 16px;
+    margin-bottom: 0.75em;
+    box-sizing: border-box;
+}
+.item a{
+    font-size: 16px;
+    color: #6558C3;
+    font-weight: bold;
+    cursor: pointer;
+}
+textarea{
+    display: block;
+    width: 100%;
+    border: solid 1px black;
+    height: 250px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* SHOW */ 
+.content{
+    width: 60%;
+    margin: 0 auto;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.head a{
+    text-decoration: none;
+    padding: 8px;
+    background: #6558C3;
+    border-radius: 4px; 
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.receita-image{
+    width: 100%;
+    height: 280px;
+    margin: 2em 0;
+    border-radius: 15px;
+}
+.lista{
+    width: 100%;
+    list-style-position: inside;
+}
+ul.dash {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+}
+ul.dash > li:before {
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -1em;
+}
+li:first-child{
+    margin-top: 16px;
+}
+li{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+p{
+    margin-top: 16px;
+    text-align: justify;
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.relative{
+    position: relative;
+}
+#form-delete{
+    position: absolute;
+    top: 0;
+    right: 16%;
+}
+#form-delete button{
+    background: #DC4747;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding:8px;
+    cursor: pointer;
+    font-weight: bold;
+}
