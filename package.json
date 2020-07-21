@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felipejoazeiro/Foodfly.git"
+    "url": "git+https://github.com/felipejoazeiro/Foodfy.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/felipejoazeiro/Foodfly/issues"
+    "url": "https://github.com/felipejoazeiro/Foodfy/issues"
   },
-  "homepage": "https://github.com/felipejoazeiro/Foodfly#readme",
+  "homepage": "https://github.com/felipejoazeiro/Foodfy#readme",
   "dependencies": {
     "express": "^4.17.1",
     "method-override": "^3.0.0",
