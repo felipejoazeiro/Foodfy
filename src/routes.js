@@ -18,4 +18,8 @@ routes.put("/admin/recipes", recipes.put); // Editar uma receita
 routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita
 
 routes.get("/admin/chefs", chefs.index)
+routes.get("/admin/chefs/create", chefs.create)
+routes.post("/admin/chefs",chefs.post)
+routes.get("/admin/chefs/:id",chefs.show)
+
 module.exports = routes

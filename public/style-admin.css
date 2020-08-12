@@ -298,16 +298,60 @@ p{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0 auto;
+    margin: 32px auto;
     text-align: center;
 }
 .img-chef{
     width: 200px;
     height: 200px;
-    image-rendering: crisp-edges;
     border-radius: 50%;
-    margin: 0 auto;
+    margin: 8px auto;
 }
 .card-img-chef p{
     text-align: center;
+    margin: 0;
+}
+
+.recipes div:first-child{
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+.card-receitas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.receita{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.img-receita{
+    width: 172px;
+    height: 80px;
+    border-radius: 8.75px;
+}
+.img-info h3,
+.img-info p,
+.img-info button{
+    margin: 0;
+    font-weight: normal;
+}
+.img-info h3{
+    font-size: 18px;
+    color: #111111;
+}
+.img-info p{
+    font-size: 14px;
+    color: #777777;
+}
+.img-info button{
+    background-color: white;
+    font-size: 14px;
+    color: #6558C3;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* create chef */
+.item div:first-child{
+    font-weight: bold;
 }
