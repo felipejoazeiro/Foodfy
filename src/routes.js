@@ -1,7 +1,8 @@
 const express = require('express')
 const routes = express.Router()
-const receitas = require('./controllers/receitas')
-const recipes = require('./controllers/admin')
+const receitas = require('./app/controllers/receitas')
+const recipes = require('./app/controllers/admin')
+const chefs = require('./app/controllers/chefs')
 
 routes.get('/', receitas.index)
 routes.get('/receitas', receitas.receitas)
@@ -16,4 +17,5 @@ routes.get("/admin/recipes/:id/edit", recipes.edit); // Mostrar formulário de e
 routes.put("/admin/recipes", recipes.put); // Editar uma receita
 routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita
 
+routes.get("/admin/chefs", chefs.index)
 module.exports = routes

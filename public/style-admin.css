@@ -16,9 +16,11 @@ header{
     height: 100%;
     margin-bottom: 2.7%;
     display: flex;
+    
     padding: 15px 0;
 }
-.titulo{
+.header-nav{
+    display: flex;
     width: 60%;
     margin: 0 auto;
 }
@@ -30,7 +32,13 @@ header{
     text-decoration: none;
 }
 header .links{
+    margin-left: 64px;
     margin-top: 10px
+}
+header .header-nav nav.links a{
+    color: white;
+    margin-right: 16px;
+    text-decoration: none;
 }
 .container{
     width:60%;
@@ -255,4 +263,51 @@ p{
     padding:8px;
     cursor: pointer;
     font-weight: bold;
+}
+
+
+/* SHOW CHEFS */
+
+.cards-chefs {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.cards-chefs .card-chef .card-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards-chefs .card-chef .card-title:first-child{
+    font-weight: bold;
+    font-size: 24px;
+    color: #111111;
+}
+
+.cards-chefs .card-chef .card-title #edit button{
+    background: #6558C3;
+    box-sizing: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card-img-chef{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.img-chef{
+    width: 200px;
+    height: 200px;
+    image-rendering: crisp-edges;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.card-img-chef p{
+    text-align: center;
 }
