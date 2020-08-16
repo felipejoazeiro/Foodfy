@@ -9,8 +9,23 @@
             </div>
             <div class="form">
                 <div class="item">
+                    <div>Nome da receita</div>
+                    <input type="text" name="title">
+                </div>
+                <div class="item">
                     <div>Imagem da receita</div>
-                    <input type="url" name="receita_url">
+                    <input type="url" name="image">
+                </div>
+                <div class="item">
+                    <div>Chef</div>
+                    <div>
+                        <select name="chef_id" id="">
+                            {% for chef in chefOptions %}
+                                <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %}Selected
+                                {% endif %}>{{chef.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
                 </div>
                 <div class="item">
                     <div>Ingredientes</div>

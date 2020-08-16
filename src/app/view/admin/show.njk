@@ -3,15 +3,18 @@
 {% block content %}
 <div class="content">
     <section class="head">
-        <h2>Receita: {{receita.name}}</h2>
-        <a href="/admin/recipes/{{receita.id}}/edit">Editar receita</a>
+        <h2>Receita: {{recipes.title}}</h2>
+        <a href="/admin/recipes/{{recipes.id}}/edit">Editar receita</a>
     </section>
-    <section class="receita-image" style="background: url({{receita.receita_url}}) no-repeat center center / cover"></section>
+    <section>
+        <div class="receita-image" style="background: url({{recipes.image}}) no-repeat center center / cover"></div>
+        <div>Autor: {{recipes.chef_name}}</div>
+    </section>
     <section class="itens">
         <div class="item">
             <h3>Ingredientes</h3>
             <ul class="dash">
-            {% for item in receita.ingredients %}
+            {% for item in recipes.ingredients.split(",") %}
                 <li>{{item}}</li>
             {% endfor %}
             </ul>
@@ -19,15 +22,15 @@
         <div class="item">
             <h3>Modo de preparo</h3>
             <ul class="dash">
-            {% for item in receita.preparation %}
+            {% for item in recipes.preparation.split(",") %}
                 <li>{{item}}</li>
             {% endfor %}
             </ul>
         </div>
-        {% if receita.information %}
+        {% if recipes.information %}
         <div class="item">
             <h3>Informações adicionais</h3>
-            <p>{{receita.information}}</p>
+            <p>{{recipes.information}}</p>
         </div>
         {% endif %}
     </section>

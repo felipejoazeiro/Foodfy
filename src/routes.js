@@ -1,7 +1,7 @@
 const express = require('express')
 const routes = express.Router()
-const receitas = require('./app/controllers/receitas')
-const recipes = require('./app/controllers/admin')
+const receitas = require('./app/controllers/public')
+const recipes = require('./app/controllers/recipes')
 const chefs = require('./app/controllers/chefs')
 
 routes.get('/', receitas.index)

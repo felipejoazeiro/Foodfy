@@ -7,13 +7,14 @@
             <section class="foods">
                 <h2>Gerenciar receitas</h2>
                 <div class="cards">
-                {% for item in items %}
-                    <div id="{{item.id}}" class="card">
-                        <section class="card-img" style="background: url({{item.receita_url}}) no-repeat center center / cover"></section>
+                {% for recipe in recipes %}
+                    <div id="{{recipe.id}}" class="card">
+                        <section class="card-img" style="background: url({{recipe.image}}) no-repeat center center / cover"></section>
                         <section class="card-description">
-                            <h3>{{item.name}}</h3>
-                            <p id="author">{{item.author}}</p>
-                            <a href="/admin/recipes/{{item.id}}">Visualizar</a>
+                            <h3>{{recipe.title}}</h3>
+                            <p id="author">
+                            {{recipe.name}}</p>
+                            <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
                         </section>
                     </div>
                 {% endfor %}

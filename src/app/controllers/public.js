@@ -1,8 +1,10 @@
-const Recipe = require('../models/receita')
+const Recipe = require('../models/public')
 
 module.exports = {
     index(req,res){
-        return res.render('receitas/index')
+        Recipe.all((recipes)=>{
+            return res.render('receitas/index',{recipes})
+        })
     },
     receitas(req,res){
         return res.render('receitas/receitas',{items:data.receitas})
