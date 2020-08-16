@@ -51,16 +51,8 @@ module.exports = {
         })
     },
     delete(req,res){
-        const {id} = req.body
-        const filteredReceita = data.receitas.filter((receita)=>{
-            return receita.id != id
+        Recipe.delete(req.body.id,()=>{
+            return res.redirect('/admin/recipes')
         })
-    
-        data.receitas = filteredReceita
-    
-        fs.writeFile('data.json', JSON.stringify(data,null,4),(err)=>{
-            if(err) return res.send('Write error')
-        })
-        return res.redirect('/admin/recipes')
     }
 }

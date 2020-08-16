@@ -166,7 +166,8 @@ div.title button{
 .item div:first-child{
     margin-bottom: 0.75em;
 }
-.item input{
+.item input,
+.item select{
     display: block;
     width: 100%;
     border: solid 1px black;
@@ -354,4 +355,39 @@ p{
 /* create chef */
 .item div:first-child{
     font-weight: bold;
+}
+
+/* INDEX CHEF */
+.cards-chefs .chefs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.cards-chefs .title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 36px;
+}
+.chefs .chef{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    margin-bottom: 24px;
+}
+.chef .chef-image{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+.chef .chef-information {
+    margin: 6px 0 0 16px;
+}
+.chef .chef-information .chef-name{
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+.chef .chef-information a{
+    font-size: 14px;
+    color: #6558C3;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
 }

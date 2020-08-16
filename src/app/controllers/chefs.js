@@ -3,7 +3,9 @@ const {date} = require('../../lib/utils')
 
 module.exports={
     index(req,res){
-        return res.render('chefs/index')
+        Chef.all((chefs)=>{
+            return res.render('chefs/index',{chefs})
+        })
     },
     create(req,res){
         return res.render('chefs/create')

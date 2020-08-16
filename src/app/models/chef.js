@@ -3,7 +3,13 @@ const db = require('../../config/db')
 
 module.exports = {
     all(callback){
-
+        db.query(`
+            SELECT * FROM chefs
+        `, (err,results)=>{
+            if(err) throw 'Database error'
+            callback(results.rows)
+        })
+    
     },
     create(data, callback){
         const query = `

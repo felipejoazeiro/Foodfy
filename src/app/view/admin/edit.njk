@@ -1,22 +1,36 @@
 {% extends "admin/layout.njk" %}
-
 {% block content %}
     <main  class="create-form relative" >
         <form method="POST" action="/admin/recipes?_method=PUT">
             <div class="title">
-                <h3>Criando Receita</h3>
+                <h3>Editar Receita</h3>
                 <button type="submit">Salvar receita</button>
             </div>
             <div class="form">
                 <div class="item">
+                    <div>Titulo da Receita</div>
+                    <input type="text" value="{{recipes.title}}" name="title">
+                </div>
+                <div class="item">
                     <div>Imagem Receita</div>
-                    <input type="url" value="{{receita.receita_url}}" name="receita_url">
+                    <input type="url" value="{{recipes.image}}" name="image">
+                </div>
+                <div class="item">
+                    <div>Chef</div>
+                    <div>
+                        <select name="chef_id" id="">
+                            {% for chef in chefOptions %}
+                                <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %}Selected
+                                {% endif %}>{{chef.name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
                 </div>
                 <div class="item">
                     <div>Ingredientes</div>
                     <div id="ingredients-list">
-                    {% for ingrediente in receita.ingredients %}
-                        <input type="text" value="{{ingrediente}}" name=ingredients>
+                    {% for ingrediente in recipes.ingredients.split(",") %}
+                        <input type="text" value="{{ingrediente}}" name="ingredients">
                     {% endfor %}
                     </div>
                     <a id="newIngredient">Adicionar novo ingrediente</a>
@@ -24,7 +38,7 @@
                 <div class="item">
                     <div>Modo de Preparo</div>
                     <div id="preparation-list">
-                    {% for etapa in receita.preparation %}
+                    {% for etapa in recipes.preparation.split(",") %}
                         <input type="text" value="{{etapa}}" name="preparation">
                     {% endfor %}
                     </div>
@@ -35,14 +49,14 @@
                 <div class="item">
                     <div>Informações Adicionais</div>
                     <div>
-                        <textarea name="information" rows="10" cols="40">{{receita.information}}</textarea>
+                        <textarea name="information" rows="10" cols="40">{{recipes.information}}</textarea>
                     </div>
                 </div>
             </div>
-            <input type="hidden" name="id" value="{{receita.id}}">
+            <input type="hidden" name="id" value="{{recipes.id}}">
         </form>
         <form id="form-delete" action="/admin/recipes?_method=DELETE" method="POST">
-            <input type="hidden" name="id" value={{receita.id}}>
+            <input type="hidden" name="id" value={{recipes.id}}>
             <button type="submit">Deletar</button>
         </form>
     </main>
