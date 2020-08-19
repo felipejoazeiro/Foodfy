@@ -256,6 +256,12 @@ p{
     top: 0;
     right: 16%;
 }
+.img-info a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #6558C3;
+    font-weight: bold;
+}
 #form-delete button{
     background: #DC4747;
     border-radius: 4px;
@@ -390,4 +396,10 @@ p{
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+}
+
+.title div:first-child{
+    font-size: 24px;
+    color: #111111;
+    font-weight: bold;
 }

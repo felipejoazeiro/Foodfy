@@ -1,0 +1,27 @@
+{% extends 'chefs/layout.njk' %}
+
+{% block content %}
+<main class="create-form relative" >
+    <form method="POST" action="/admin/chefs?_method=PUT" >
+        <div class="title">
+            <div>Editar Chef</div>
+            <button type="submit">Salvar Chef</button>
+        </div>
+        <div class="form">
+            <div class="item">
+                <div>Nome do Chef</div>
+                <input type="text" value={{chefs.name}} name="name">
+            </div>
+            <div class="item">
+                <div>Imagem do Chef</div>
+                <input type="url" value={{chefs.avatar_url}} name="avatar_url">
+            </div>
+        </div>
+        <input type="hidden" name="id" value="{{chefs.id}}">
+    </form>
+    <form id="form-delete" action="/admin/chefs?_method=DELETE" method="POST">
+        <input type="hidden" name="id" value={{chefs.id}}>
+        <button type="submit">Deletar</button>
+    </form>
+</main>
+{% endblock content %}

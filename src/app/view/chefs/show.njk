@@ -3,10 +3,10 @@
 <main>
     <div class="cards-chefs">
         <div class="card-chef">
-            <div class="card-title">
+            <div class="card-title head">
                 <div>Chef: {{chef.name}}</div>
                 <div id="edit">
-                    <button>Editar Chef</button>
+                    <a href="/admin/chefs/{{chef.id}}/edit">Editar Chef</a>
                 </div>
             </div>
             <div class="card-img-chef">
@@ -30,7 +30,7 @@
                         <div class="img-info">
                             <h3>{{recipe.title}}</h3>
                             <p>Por: {{chef.name}}</p>
-                            <button>Visualizar</button>
+                            <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
                         </div>
                     </div>
                     <input type="hidden" name="id" value="{{recipe.chef_id}}">
