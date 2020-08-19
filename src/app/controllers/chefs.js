@@ -24,9 +24,9 @@ module.exports={
     show(req,res){
         Chef.find(req.params.id,(chef)=>{
             if(!chef) return res.send('Chef not found')
-            chef.create_at = date(chef.created_at).format
-
-            return res.render('chefs/show',{chef})
+            Chef.findRecipes(req.body,(recipes)=>{
+                return res.render('chefs/show',{chef,recipes})
+            })
         })
     }
 }

@@ -10,38 +10,33 @@
                 </div>
             </div>
             <div class="card-img-chef">
-                <div class="img-chef" style="background: url(https://images.unsplash.com/photo-1518148750009-25b2522df9c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60%20no-repeat%20center%20center%20/%20cover) no-repeat center center / cover">
+                <div class="img-chef" style="background: url({{chef.avatar_url}}) no-repeat center center / cover">
                 </div>
                 <div class="name-chef">
                     <h2>{{chef.name}}</h2>
-                    <p>4 Receitas</p>
+                    <p>{{chef.total_recipes}} Receitas</p>
                 </div>
             </div>
             <section class="recipes">
                 <div>Receitas</div>
                 <div class="card-receitas">
+                    {% for recipe in recipes %}
+                    {% if recipe.chef_id == chef.id %}
                     <div class="receita">
                         <div class="img-receita"
-                        style="background: url(https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60) no-repeat center center / cover"
+                        style="background: url({{recipe.image}}) no-repeat center center / cover"
                         >    
                         </div>
                         <div class="img-info">
-                            <h3>Hamburguer</h3>
-                            <p>Por: Felipe Joazeiro</p>
+                            <h3>{{recipe.title}}</h3>
+                            <p>Por: {{chef.name}}</p>
                             <button>Visualizar</button>
                         </div>
                     </div>
-                    <div class="receita">
-                        <div class="img-receita"
-                        style="background: url(https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60) no-repeat center center / cover"
-                        >
-                        </div>
-                        <div class="img-info">
-                            <h3>Hamburguer</h3>
-                            <p>Por: Felipe Joazeiro</p>
-                            <button>Visualizar</button>
-                        </div>
-                    </div>
+                    <input type="hidden" name="id" value="{{recipe.chef_id}}">
+
+                    {% endif %}
+                    {% endfor %}
                 </div>
             </section>
         </div>
